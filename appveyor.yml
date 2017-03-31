@@ -1,0 +1,6 @@
+test_script:
+- ps: $ErrorActionPreference = "Stop"
+- where aws
+- Get-Command Remove-EC2Instance
+
+build: off
