@@ -3,5 +3,6 @@ echo "Path to aws tools:"
 Write-Output (cmd /c where aws)
 if ($LastExitCode -ne 0) {$host.SetShouldExit($LastExitCode)}
 $version = aws --version
-echo "version"
+Write-Host "aws-cli version: $env:version"
+Write-Output (aws --version)
 Get-Command Remove-EC2Instance
